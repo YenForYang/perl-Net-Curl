@@ -7,10 +7,10 @@ use File::Find;
 
 # you can set those manually if curl-config is not working for you
 my %curl = (
-	incdir => '',	# /some/path (where curl/curl.h is)
-	cflags => '',	# -I/some/path
-	libs => '',	# -lcurl
-	version => ''	# 7.21.0
+	incdir => '',	# /some/path (where curl/curl.h is) -- ex. for Windows from previous experience:  q' Z:\curl-7.59.0\builds\libcurl-vc-x64-release-dll-cares-dll-zlib-dll-ssh2-dll-ipv6-sspi-winssl-nghttp2-dll\include',
+	cflags => '',	# -I/some/path -- e.g. q' -IZ:\curl-7.59.0\builds\libcurl-vc-x64-release-dll-cares-dll-zlib-dll-ssh2-dll-ipv6-sspi-winssl-nghttp2-dll\include',
+	libs => '',	# -lcurl -- e.g. q' -lZ:\curl-7.59.0\builds\libcurl-vc-x64-release-dll-cares-dll-zlib-dll-ssh2-dll-ipv6-sspi-winssl-nghttp2-dll-obj-lib\libcurl.lib',
+	version => ''	# 7.59.0
 );
 
 my $www_compat = 1;
