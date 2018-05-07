@@ -17,6 +17,15 @@
 #include "perl.h"
 #include "XSUB.h"
 
+#ifdef __MINGW32__
+#ifdef fread
+#undef fread
+#endif
+#ifdef fwrite
+#undef fwrite
+#endif
+#endif
+
 #include <curl/curl.h>
 #include <curl/easy.h>
 #include <curl/multi.h>
